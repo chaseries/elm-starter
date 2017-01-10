@@ -3,10 +3,12 @@ var path = require("path");
 
 module.exports = {
   entry: "./src/main.js",
+
   output: {
     path: path.resolve(__dirname + "/build"),
     filename: "[name].js"
   },
+
   module: {
     loaders: [
       {
@@ -19,10 +21,11 @@ module.exports = {
       },
       {
         test: /\.elm$/,
-        exclude: [/elm-stuff/, /node-modules/],
+        exclude: [/elm-stuff/, /node_modules/],
         loader: "elm-webpack"
       }
     ],
+
     noParse: /\.elm$/,
   }
 }
