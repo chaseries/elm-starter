@@ -13,7 +13,7 @@ initialModel =
 type Msg
   = NoOp
 
-init : ( Model, Cmd Msg )
+init : (Model, Cmd Msg)
 init =
   initialModel ! []
 
@@ -21,7 +21,7 @@ view : Model -> Html Msg
 view model =
   text "An Elm starter app."
 
-update : Msg -> Model -> ( Model, Cmd Msg )
+update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
     _ ->
