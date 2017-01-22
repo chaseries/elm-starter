@@ -6,12 +6,16 @@ import Html exposing (Html, program, text)
 type alias Model =
   ()
 
+initialModel : Model
+initialModel =
+  ()
+
 type Msg
   = NoOp
 
 init : ( Model, Cmd Msg )
 init =
-  () ! []
+  initialModel ! []
 
 view : Model -> Html Msg
 view model =
@@ -21,7 +25,7 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
   case msg of
     _ ->
-      () ! []
+      model ! []
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
